@@ -46,3 +46,12 @@ void draw() {
 boolean sketchFullScreen(){
   return true;
 }
+
+void keyPressed(){
+  if(key == ' '){
+    linesArray = new ArrayList<HandDrawnLine>();
+    for (int i = 0; i < 50; ++i) {
+      linesArray.add(new HandDrawnLine(random(50,2*width), random(-PI,PI), random(-PI,PI), random(-PI,PI), int(random(3,8)), color(0,0,0)));
+    }
+  }
+}
